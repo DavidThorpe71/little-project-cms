@@ -1,0 +1,26 @@
+{
+  "name": "little-project-cms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/DavidThorpe71/little-project-cms.git",
+  "author": "David Thorpe <davidthorpe878@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node --exec babel-node src/index.js",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./dist && webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "babel-loader": "^8.1.0",
+    "nodemon": "^2.0.4",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
