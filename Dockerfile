@@ -1,9 +1,12 @@
-FROM node:12-stretch
+FROM node:12-alpine
 
-COPY / /
+WORKDIR /build
+
+COPY . .
 
 RUN rm -rf "./node_modules" && \
   yarn install && \
   yarn build
+
 
 CMD [ "node", "./dist/index.js" ]
